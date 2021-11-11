@@ -28,13 +28,13 @@ default: &default
 
   # PostgreSQL
   adapter: postgresql
-  username: kamina<%#= ENV['DATABASE_USERNAME'] %>
+  username: postgres<%#= ENV['DATABASE_USERNAME'] %>
   password: <%#= ENV['DATABASE_PASSWORD'] %>
 
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: localhost<%#= ENV['DATABASE_HOST'] %>
-  port: 5433<%#= ENV['DATABASE_PORT'] %>
+  port: 5432<%#= ENV['DATABASE_PORT'] %>
 
 development:
   <<: *default
@@ -84,6 +84,6 @@ review_app:
 
 production:
   <<: *default
-  database: <%= ENV['DATABASE_DATABASE'] %>
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  database: postgres
+  username: postgres
+  password: postgres

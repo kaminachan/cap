@@ -6,6 +6,5 @@ role :db, %w{ubuntu@18.178.232.171}
 
  set :ssh_options, {
    keys: %w(~/.ssh/key/202111sample-capistrano.pem),
-   # forward_agent: false,
    auth_methods: %w(publickey)
  }

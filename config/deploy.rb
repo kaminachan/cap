@@ -4,7 +4,7 @@ lock "~> 3.16.0"
 set :application, "cap"
 set :repo_url, "git@github.com:kaminachan/cap.git"
 set :deploy_to, "/home/#{fetch(:application)}"
-set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml config/master.key}
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle')
 set :rvm_type, :system
 set :rvm_ruby_version, '2.6.3@cap'

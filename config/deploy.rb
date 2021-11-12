@@ -2,6 +2,8 @@
 lock "~> 3.16.0"
 
 set :application, "cap"
+set :keep_releases, 1
+set :use_sudo, false
 set :repo_url, "git@github.com:kaminachan/cap.git"
 set :deploy_to, "/home/#{fetch(:application)}"
 set :linked_files, %w{config/database.yml config/master.key}
